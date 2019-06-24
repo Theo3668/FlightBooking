@@ -1,0 +1,158 @@
+<div class="container register">
+    <div class="row">
+        <div class="col-md-3 register-left">
+            <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+            <h3>Welcome</h3>
+            <p>You are in for the 'jet' experience</p>
+            <input type="submit" value="Back" (click)="onBack()" /><br/>
+        </div>
+        <div class="col-md-9 register-right">
+            <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Passanger</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Airline</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <h3 class="register-heading">Passanger Information</h3>
+                    <div class="row register-form">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <select class="form-control" name="title" [(ngModel)]="title">
+                                          <option class="hidden"  selected disabled>Title</option>
+                                          <option>Mr</option>
+                                          <option>Mrs</option>
+                                          <option>Ms</option>
+                                          <option>Dr</option>
+                                      </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Full name *" name="fullName" [(ngModel)]="fullName" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" maxlength="13" class="form-control" placeholder="ID number *" name="idNum" [(ngModel)]="idNum" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Email address *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" minlength="10" maxlength="10" class="form-control" placeholder="Contact number *" name="phone" [(ngModel)]="phone" />
+                            </div>
+                            <div class="form-group">
+                                <div class="maxl">
+                                    <label class="radio inline"> 
+                                      <input type="radio" name="gender" value="male" name="radio" [(ngModel)]="radio" checked>
+                                      <span> Male &nbsp;</span> 
+                                  </label>
+                                    <label class="radio inline"> 
+                                      <input type="radio" name="gender" value="female" name="radio" [(ngModel)]="radio">
+                                      <span>Female </span> 
+                                  </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h6><i>Emergency contact</i></h6>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Full name *" name="emName" [(ngModel)]="emName" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Relationship *" name="emRelation" [(ngModel)]="emRelation" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Contact number *" name="emPhone" [(ngModel)]="emPhone" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Email address *" name="emEmail" [(ngModel)]="emEmail" />
+                            </div>
+
+                            <input type="submit" class="btnRegister" (click)="onBook()" value="Make Booking" />
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <h3 class="register-heading">Flight Information</h3>
+                    <div class="row register-form">
+                        <table>
+                            <tr>
+                                <th>Ticket Type: </th>
+                                <td>{{ticketType}}</td>
+                            </tr>
+                            <tr>
+                                <th>Age Group: </th>
+                                <td>{{ageGroup}}</td>
+                            </tr>
+                            <tr>
+                                <th>Seating Type: </th>
+                                <td>{{seatType}}</td>
+                            </tr>
+                            <tr>
+                                <th>Depature: </th>
+                                <td>{{depatureTime}}</td>
+                            </tr>
+                            <tr>
+                                <th>Return: </th>
+                                <td>{{returnTime}}</td>
+                            </tr>
+                            <tr>
+                                <th>Number of tickets: </th>
+                                <td>{{numTicket}}</td>
+                            </tr>
+                            <tr>
+                                <th>Destination: </th>
+                                <td>{{place}}</td>
+                            </tr>
+                        </table>
+                        <!-- <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="First Name *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Email *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone *" value="" />
+                            </div>
+
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Password *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control">
+                                  <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
+                                  <option>What is your Birthdate?</option>
+                                  <option>What is Your old Phone Number</option>
+                                  <option>What is your Pet Name?</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="`Answer *" value="" />
+                            </div>
+                            <input type="submit" class="btnRegister" (click)="onBook()" value="Make Booking" />
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p class="text-center"> <a href="startPage">FlightCo.©</a>.</p>
+</footer>

@@ -1,0 +1,14 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <ul>
+                <li class="navbar-brand pull-right" *ngFor="let item of navArray" (click)="onNavigate(item)">
+                    <a class="nav-link"> {{item.name}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<router-outlet>
+</router-outlet>

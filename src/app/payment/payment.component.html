@@ -1,0 +1,267 @@
+<div class="containoo text-center">
+    <!-- <div class="row text-center">
+        <h2><span data-translate="classifiedadApp.adForSale.detail.title">Ad For Sale</span></h2>
+    </div> -->
+
+    <div class="checkout-content">
+        <form name="payForm" role="form" class="form-horizontal" ng-submit="vm.initPayment();">
+            <div class="row">
+                <!--Content: Start -->
+                <div class="col-md-8 col-md-offset-2">
+                    <!-- <div class="row text-center">
+                        For ordering assistance, please call 856-782-8900 9am-4pm EST
+                    </div> -->
+                    <fieldset class="scheduler-border">
+                        <legend class="scheduler-border"> Payment Information</legend>
+                        <!--Payment form-->
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img class="img-responsive pull-left" src="http://i76.imgup.net/accepted_c22e0.png">
+                                <div class="form-group">
+                                    <label class="checkbox-inline"><input type="checkbox" value="">Use account From
+                                      Prior Order</label>
+                                </div>
+
+                                <div class="form-group">
+                                    <select class="form-control" name="paymentType" [(ngModel)]="paymentType">
+                                      <option>Savings</option>
+                                      <option>Credit</option>
+                                      <option>Debit</option>
+                                  </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="checkbox-inline">
+                                      <input type="checkbox" checked="checked" value="">New Credit/Debit Card
+                                  </label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="label-control">Card Number:</label>
+                                    <input type="number" class="form-control" ng-model="vm.payment.creditCardDTO.number">
+                                </div>
+
+                                <!-- Expiry-->
+                                <label class="control-label" for="expiry_month">Expiration</label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <select class="form-control" name="expiry_month" id="expiry_month" ng-model="vm.payment.creditCardDTO.expireMonth">
+                                              <option></option>
+                                              <option value="01">Jan (01)</option>
+                                              <option value="02">Feb (02)</option>
+                                              <option value="03">Mar (03)</option>
+                                              <option value="04">Apr (04)</option>
+                                              <option value="05">May (05)</option>
+                                              <option value="06">June (06)</option>
+                                              <option value="07">July (07)</option>
+                                              <option value="08">Aug (08)</option>
+                                              <option value="09">Sep (09)</option>
+                                              <option value="10">Oct (10)</option>
+                                              1
+                                              <option value="11">Nov (11)</option>
+                                              <option value="12">Dec (12)</option>
+                                          </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <select class="form-control" name="expiry_year" ng-model="vm.payment.creditCardDTO.expireYear">
+                                              <option value="13">2013</option>
+                                              <option value="14">2014</option>
+                                              <option value="15">2015</option>
+                                              <option value="16">2016</option>
+                                              <option value="17">2017</option>
+                                              <option value="18">2018</option>
+                                              <option value="19">2019</option>
+                                              <option value="20">2020</option>
+                                              <option value="21">2021</option>
+                                              <option value="22">2022</option>
+                                              <option value="23">2023</option>
+                                          </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Expiration -->
+                                <div class="form-group">
+                                    <label>Name this account(Optional)</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <!-- <div class="row text-center">
+                                    Billing Information
+                                </div> -->
+                                <div class="form-group">
+                                    <label class="control-label col-sm-4" for="firstName">First Name: </label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="firstName">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-4" for="lastName">Last Name: </label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="lastName">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-4" for="company">Company: </label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="company" ng-model="vm.payment.creditCardDTO.company">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-4" for="city">City: </label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="city" ng-model="vm.payment.creditCardDTO.city">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-4" for="zip">Zip/Postal Code: </label>
+                                    <div class="col-sm-8">
+                                        <input type="number" class="form-control" id="zip" ng-model="vm.payment.creditCardDTO.zip">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-4" for="province">Province: </label>
+                                    <div class="col-sm-8">
+                                        <select class="form-control" id="province" name="province" [(ngModel)]="province">
+                                          <option>Eastern Cape</option>
+                                          <option>Free State</option>
+                                          <option>Gauteng</option>
+                                          <option>KwaZulu-Natal</option>
+                                          <option>Limpopo</option>
+                                          <option>Mpumalanga</option>
+                                          <option>Northern Cape</option>
+                                          <option>North West</option>
+                                          <option>Western Cape</option>
+                                      </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-4" for="phone">Phone: </label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="phone" ng-model="vm.payment.creditCardDTO.phone">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-4" for="fax">Fax: </label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="fax" ng-model="vm.payment.creditCardDTO.fax">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <!--Content: End -->
+            </div>
+
+            <!-- The last element: submit button-->
+            <div class="row text-center" ng-show="!vm.approuveIt">
+                <button type="button" class="btn btn-primary btn-classified " data-toggle="modal" data-target="#hiddenModal">
+                  <span class="fa fa-envelope"></span>&nbsp;
+                  Make Payment
+              </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!--container end.//-->
+
+<!-- pop up -->
+<div class="container popup modal fade" id="hiddenModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body p-0">
+                    <div class="row p-5">
+                        <div class="col-md-6">
+                            <img src='/assets/images/plane11.jpg'>
+                        </div>
+
+                        <div class="col-md-6 text-right">
+                            <p class="font-weight-bold mb-1">Invoice #550</p>
+                            <p class="text-muted">Due to: 4 Dec, 2019</p>
+                        </div>
+                    </div>
+
+                    <hr class="my-5">
+
+                    <div class="row pb-5 p-5">
+                        <div class="col-md-6">
+                            <p class="font-weight-bold mb-4">Passanger Information</p>
+                            <p class="mb-1">{{title &nbsp;}} {{fullName}}</p>
+                            <p>{{idNum}}</p>
+                            <p class="mb-1">{{province}}, South Africa</p>
+                            <p class="mb-1">{{phone}}</p>
+                        </div>
+
+                        <div class="col-md-6 text-right">
+                            <p class="font-weight-bold mb-4">Payment Details</p>
+                            <p class="mb-1"><span class="text-muted">VAT: </span> 1425782</p>
+                            <p class="mb-1"><span class="text-muted">VAT ID: </span> 10253642</p>
+                            <p class="mb-1"><span class="text-muted">Payment Type: </span> {{paymentType}}</p>
+                            <p class="mb-1"><span class="text-muted">Name: </span> {{firstName &nbsp;}},{{lastName}}</p>
+                        </div>
+                    </div>
+
+                    <div class="row p-5">
+                        <div class="col-md-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="border-0 text-uppercase small font-weight-bold">Number of tickets</th>
+                                        <th class="border-0 text-uppercase small font-weight-bold">Destination</th>
+                                        <th class="border-0 text-uppercase small font-weight-bold">Description</th>
+                                        <!-- <th class="border-0 text-uppercase small font-weight-bold">Quantity</th> -->
+                                        <th class="border-0 text-uppercase small font-weight-bold">Unit Cost</th>
+                                        <th class="border-0 text-uppercase small font-weight-bold">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>London</td>
+                                        <td>LTS Versions</td>
+                                        <!-- <td>21</td> -->
+                                        <td>$321</td>
+                                        <td>$3452</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-row-reverse bg-dark text-white p-4">
+                        <div class="py-3 px-5 text-right">
+                            <div class="mb-2">Grand Total</div>
+                            <div class="h2 font-weight-light">$234,234</div>
+                        </div>
+
+                        <div class="py-3 px-5 text-right">
+                            <div class="mb-2">Discount</div>
+                            <div class="h2 font-weight-light">10%</div>
+                        </div>
+
+                        <div class="py-3 px-5 text-right">
+                            <div class="mb-2">Sub - Total amount</div>
+                            <div class="h2 font-weight-light">$32,432</div>
+                        </div>
+
+                    </div>
+                    <button class="button btn btn-primary btn-classified" style="vertical-align:middle" (click)="onPrevious()"><span>Done </span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<footer>
+    <p class="h5 text-white">You should consult your own tax, legal and accounting advisors before engaging in any financial transaction.<br> FlightCo respects your right to privacy and takes every precaution to provide you with the same level of privacy within our virtual branch
+        that you receive through more traditional bank delivery channels.</p>
+</footer>

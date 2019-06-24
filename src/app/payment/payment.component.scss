@@ -1,0 +1,82 @@
+/*Design of the checkout page: Start*/
+
+.first-content {
+    margin-top: 5px;
+}
+
+.btn-black {
+    background-color: black !important;
+    border-color: black !important;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 24px;
+}
+
+.btn-black:hover {
+    background-color: #15c !important;
+    border-color: #15c !important;
+}
+
+
+/*Fieldset element*/
+
+fieldset.scheduler-border {
+    border-radius: 20px;
+    border: 1px solid black !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow: 0 0 0 0 #000;
+    box-shadow: 0 0 0 0 #000;
+}
+
+legend.scheduler-border {
+    font-size: 1.2em !important;
+    font-weight: bold !important;
+    width: auto;
+    padding: 10px 10px;
+    margin-left: 50%;
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.selectAdList {
+    padding: 0 15px;
+}
+
+
+/*Submit button*/
+
+.btn-classified {
+    background-color: #15c !important;
+    border-color: #15c !important;
+    padding: 5px 10px;
+    font-size: 15px;
+    position: relative;
+    left: 20px;
+}
+
+.scheduler-border .col-sm-6 {
+    padding-right: 0;
+}
+
+.containoo {
+    margin-left: 400px;
+    margin-right: auto;
+    // width: 100%;
+    // height: 50%;
+}
+
+
+/*Design of the checkout page: End*/
+
+// popup
+#hiddenModal {
+    width: 100%;
+    height: 50%;
+}
+
+.popup {
+    margin-left: 380px;
+    margin-right: auto;
+    margin-top: 200px;
+}

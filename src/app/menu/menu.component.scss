@@ -1,0 +1,29 @@
+.navbar-fixed-bottom,
+.navbar-fixed-top {
+    position: inherit;
+}
+
+.navbar-fixed-bottom,
+.navbar-fixed-top {
+    position: inherit;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-inverse {
+    background-color: rgb(162, 247, 235);
+    border-color: rgb(162, 247, 235);
+    // rgb(0, 255, 255);
+    // #7FFFD4;
+}
+
+.navbar-inverse .navbar-brand {
+    color: black;
+    font: italic bold 16px/30px Georgia, serif;
+}
+
+.navbar-header {
+    width: 100%;
+}

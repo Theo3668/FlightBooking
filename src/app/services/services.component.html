@@ -1,0 +1,165 @@
+<section class="search-banner text-white py-3 form-arka-plan" id="search-banner">
+    <div class="container py-5 my-5">
+        <div class="row text-center pb-4">
+            <div class="col-md-12">
+                <h2 class="text-white siyah-cerceve flightCo">FlightCo.©</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card acik-renk-form">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group ">
+                                    <p>Ticket type:</p>
+                                    <select class="form-control" name="ticketType" [(ngModel)]="ticketType">
+                                      <option value="Round Trip">Round Trip</option>
+                                      <option value="One Way">One Way</option>
+                                      <option value="Multi City">Multi City</option>
+                                  </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group ">
+                                    <p>Age group:</p>
+                                    <select class="form-control" name="ageGroup" [(ngModel)]="ageGroup">
+                                      <option selected>Adult</option>
+                                      <option>Children</option>
+                                      <option>Infants(in seat)</option>
+                                      <option>Infants</option>
+                                  </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group ">
+                                    <p>Seating:</p>
+                                    <select class="form-control" name="seatType" [(ngModel)]="seatType">
+                                      <option selected>Economy</option>
+                                      <option>Premium Economy</option>
+                                      <option>Business</option>
+                                      <option>First Class</option>
+                                      <option>Suits</option>
+                                  </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group ">
+                                    <p>Depature:</p>
+                                    <input type="date" id="ilceler" class="form-control" name="depatureTime" [(ngModel)]="depatureTime">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group ">
+                                    <p>Return:</p>
+                                    <input type="date" id="ilceler" class="form-control" name="returnTime" [(ngModel)]="returnTime">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group ">
+                                    <p>No. of tickets:</p>
+                                    <input type="number" id="iller" class="form-control" name="numTicket" [(ngModel)]="numTicket">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div class="form-group ">
+                                    <input type="text" class="form-control" placeholder="Search for your destination" name="place" [(ngModel)]="place">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-warning  pl-5 pr-5" (click)="onSubmit()">Sumit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Try Other</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Bootstrap 4.0.0 Snippet by pradeep330</h6>
+                    <p class="card-text">You can also try different version of Bootstrap V4 side menu. Click below link to view all Bootstrap Menu versions.</p>
+                    <a href="https://bootsnipp.com/pradeep330" class="card-link">link</a>
+                    <a href="http://websitedesigntamilnadu.com" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Try Other</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Bootstrap 4.0.0 Snippet by pradeep330</h6>
+                    <p class="card-text">You can also try different version of Bootstrap V4 side menu. Click below link to view all Bootstrap Menu versions.</p>
+                    <a href="https://bootsnipp.com/pradeep330" class="card-link">link</a>
+                    <a href="http://websitedesigntamilnadu.com" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Try Other</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Bootstrap 4.0.0 Snippet by pradeep330</h6>
+                    <p class="card-text">You can also try different version of Bootstrap V4 side menu. Click below link to view all Bootstrap Menu versions.</p>
+                    <a href="https://bootsnipp.com/pradeep330" class="card-link">link</a>
+                    <a href="http://websitedesigntamilnadu.com" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Try Other</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Bootstrap 4.0.0 Snippet by pradeep330</h6>
+                    <p class="card-text">You can also try different version of Bootstrap V4 side menu. Click below link to view all Bootstrap Menu versions.</p>
+                    <a href="https://bootsnipp.com/pradeep330" class="card-link">link</a>
+                    <a href="http://websitedesigntamilnadu.com" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Try Other</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Bootstrap 4.0.0 Snippet by pradeep330</h6>
+                    <p class="card-text">You can also try different version of Bootstrap V4 side menu. Click below link to view all Bootstrap Menu versions.</p>
+                    <a href="https://bootsnipp.com/pradeep330" class="card-link">link</a>
+                    <a href="http://websitedesigntamilnadu.com" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+<!-- floating pictures -->
+
+<hr>
+<div class="container-gallery">
+    <div class="popup popup-1">
+        <img class="img-fluid" alt="Pop Up Gallery" src='/assets/images/plane3.jpg' />
+    </div>
+    <div class="popup popup-2">
+        <img class="img-fluid" alt="Pop Up Gallery" src='/assets/images/plane13.jpg' />
+    </div>
+    <div class="popup popup-3">
+        <img class="img-fluid" alt="Pop Up Gallery" src='/assets/images/plane6.jpg' />
+    </div>
+    <div class="popup popup-5">
+        <img class="img-fluid" alt="Pop Up Gallery" src='/assets/images/plane12.jpg' />
+    </div>
+    <div class="popup popup-4">
+        <img class="img-fluid" alt="Pop Up Gallery" src='/assets/images/plane7.jpg' />
+    </div>
+</div>
+
+<footer>
+    <p class="text-center"><a href="startPage">FlightCo.©</a>.</p>
+</footer>
